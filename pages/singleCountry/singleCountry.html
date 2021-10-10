@@ -1,0 +1,74 @@
+<div class="single_country light">
+    <button class="back_btn" ng-click="goBack()">
+      <img class="back_arrow" src="../../assets/images/icons/back-arrow.svg" alt="back arrow"></img>
+      Back
+    </button>
+    <div class="container-fluid p-0">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <img class="detailed_page_flag" src={{country.flags.png}} alt="flag" />
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="row align-items-center ml-2 ml-md-0">
+                    <div class="col-12 col-lg-6 ">
+                        <p class="detailed_page_name">
+                            {{country.name}}
+                        </p>
+                        <p class="detailed_page_info">
+                            <span class="detailed_page_title">Native Name: </span> {{country.nativeName}}
+                        </p>
+                        <p class="detailed_page_info">
+                            <span class="detailed_page_title">Population: </span> {{country.population}}
+                        </p>
+                        <p class="detailed_page_info">
+                            <span class="detailed_page_title">Region: </span> {{country.region}}
+                        </p>
+                        <p class="detailed_page_info">
+                            <span class="detailed_page_title">Sub Region: </span> {{country.subregion}}
+                        </p>
+                        <p class="detailed_page_info">
+                            <span class="detailed_page_title">Capital: </span> {{country.capital}}
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 pl-lg-4">
+                        <div class="single_country_second_info">
+                            <p class="detailed_page_info">
+                                <span class="detailed_page_title">
+                    Top Level Domain: 
+                  </span> {{country.topLevelDomain}}
+                            </p>
+                            <p class="detailed_page_info">
+                                <span class="detailed_page_title">
+                      Currencies:
+                    </span>
+                                <span ng-repeat="currency in country.currencies">
+                       {{currency.name}}
+                   </span>
+                            </p>
+                            <p class="detailed_page_info">
+                                <span class="detailed_page_title">Languages: </span>
+                                <span ng-repeat="language in country.languages">
+                        {{language.name}},
+                    </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-if="country.borders" class="detailed_page_info border_countries">
+                    <p class="col-lg-4 detailed_page_title borders ml-2 ml-md-0 p-0">
+                        Border Countries:
+                    </p>
+                    <div class="container-fluid ml-2 ml-md-0">
+                        <div class="row justify-content-end">
+                            <div ng-repeat="border in country.borders" class="col-12 col-md-6 col-lg-3 ml-lg-2 p-md-1">
+                                <p class="border_country">{{border}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

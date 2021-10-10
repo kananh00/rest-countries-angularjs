@@ -1,0 +1,8 @@
+.list_group {
+  margin: 20px 16px;
+}
+@media (min-width: 1024px) {
+  .list_group {
+    margin: 40px 40px;
+  }
+}

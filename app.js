@@ -1,0 +1,1 @@
+var restCountries = angular.module("restCountries", ["ngRoute", "ngResource"]);
