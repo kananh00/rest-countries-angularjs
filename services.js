@@ -1,7 +1,6 @@
-// restCountries.service("alpha3CodeService", function () {
-//   this.alpha3Code = "";
-// });
-
+restCountries.service("countryService", function () {
+  this.countryName = "";
+});
 restCountries.service("singleCountryService", [
     "$scope",
     "$http",

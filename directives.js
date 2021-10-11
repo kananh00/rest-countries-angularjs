@@ -8,3 +8,16 @@ restCountries.directive("countryCard", function(){
       }
     }
 })
+
+restCountries.directive("searchAndFilter", function(){
+  return{
+    restrict: "E",
+    templateUrl: "directives/searchAndFilter/searchAndFilter.html",
+    replace: true,
+    require: 'ngModel',
+    scope: {
+      searchedCountry: '=ngModel',
+      submit: '&ngSubmit'
+    }
+  }
+})

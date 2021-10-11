@@ -1,9 +1,14 @@
+<search-and-filter ng-submit="submitSearchedCountry()" ng-model="searchCountry"></search-and-filter>
 <div class="list_group">
-    <div class="container-fluid">
-        <div class="row">
-            <div ng-click="goToCountry(country.alpha3Code)" ng-repeat="country in countries" class="col-12 col-md-4 col-lg-3">
-                <country-card country-info="country"></country-card>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        ng-click="goToCountry(country.alpha3Code)"
+        ng-repeat="country in countries"
+        class="col-12 col-md-4 col-lg-3"
+      >
+        <country-card country-info="country"></country-card>
+      </div>
     </div>
+  </div>
 </div>
